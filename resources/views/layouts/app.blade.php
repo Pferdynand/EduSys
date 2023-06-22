@@ -26,12 +26,12 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-    <body class="antialiased">
+    <body class="antialiased" style="width: 1853px;">
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
                 <div class="container">
                     <a class="navbar-brand d-flex" href="{{ url('/') }}">
-                        <div><img src="/svg/LogoFuego.svg" style="height: 25px; border-right: 2px solid #333;" class="pr-3"></div>
+                        <div><img src="/svg/LogoFuego.svg" style="background-color:azure; height: 25px; border-right: 2px solid #333;" class="pr-3 rounded-circle"></div>
                         <div class="pl-3 pt-1">Cristo Salvador</div>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
