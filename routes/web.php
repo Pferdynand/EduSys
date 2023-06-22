@@ -21,8 +21,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/estudiantes', [App\Http\Controllers\Estudiantes::class, 'index']);
+Route::get('/estudiantes', [App\Http\Controllers\EstudiantesController::class, 'index'])->name('estudiantes');
+Route::get('/mensualidades', [App\Http\Controllers\MensualidadesController::class, 'index'])->name('mensualidades');
+Route::get('/usuarios', [App\Http\Controllers\UsuariosController::class, 'index'])->name('usuarios');
