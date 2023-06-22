@@ -2,23 +2,22 @@
 
 @section('content')
 <div class="container">
-    
     <div style="width: 90%; height:750px; background-color:#333652;  display: flex;" class="relative m-2 rounded-5">
         <div class="row justify-content-center p-2" style="height:90%; width:90%">
-            <div class="col-6 rounded-5 m-2 justify-content-center cuadromenupr">
-                
-            </div>
-            <div class="col-6 rounded-5 m-2 justify-content-center cuadromenupr">
-                
-            </div>
+            <a href="/estudiantes" class="col-6 rounded-5 m-2 justify-content-center cuadromenupr"><div>
+                <img src="https://static.vecteezy.com/system/resources/previews/000/497/070/original/male-student-icon-design-vector.jpg" class="imgmenupr">
+            </div></a>
+            <a href="/usuarios" class="col-6 rounded-5 m-2 justify-content-center cuadromenupr"><div>
+                <img src="https://static.vecteezy.com/system/resources/previews/000/376/355/original/user-management-vector-icon.jpg" class="imgmenupr">
+            </div></a>
         </div>
         <div class="row justify-content-center p-2" style="height:90%; width:90%">
-            <div class="col-6 rounded-5 m-2 justify-content-center cuadromenupr">
-                
-            </div>
-            <div class="col-6 rounded-5 m-2 justify-content-center cuadromenupr">
-                
-            </div>
+            <a href="/mensualidades" class="col-6 rounded-5 m-2 justify-content-center cuadromenupr"><div>
+                <img src="https://icons.iconarchive.com/icons/webalys/kameleon.pics/512/Cashier-2-icon.png" alt=""class="imgmenupr">
+            </div></a>
+            <a href="/kardex" class="col-6 rounded-5 m-2 justify-content-center cuadromenupr"><div>
+                <img src="https://cdn.onlinewebfonts.com/svg/img_354088.png" alt=""class="imgmenupr">
+            </div></a>
         </div>
     </div>
     <!--<div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
