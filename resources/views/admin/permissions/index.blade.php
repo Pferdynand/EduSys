@@ -19,18 +19,18 @@
                             </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200">
-                                @foreach ($permissions as $permiso)
+                                @foreach ($permissions as $permission)
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
-                                            {{ $permiso->name }}
+                                            {{ $permission->name }}
                                         </div>
                                     </td>
                                     <td>
                                         <div class="flex justify-end">
                                             <div class="flex space-x-2">
-                                                <a href="{{ route('admin.permissions.edit', $permiso->id) }}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Editar</a>
-                                                <form class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md" method="POST" action="{{ route('admin.permissions.destroy', $permiso->id) }}" onsubmit="return confirm('Are you sure?');">
+                                                <a href="{{ route('admin.permissions.edit', $permission->id) }}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Editar</a>
+                                                <form class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md" method="POST" action="{{ route('admin.permissions.destroy', $permission->id) }}" onsubmit="return confirm('¿Estás seguro de eliminar este permiso?');">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit">Eliminar</button>
