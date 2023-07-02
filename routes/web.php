@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia('Welcome');
+    return Inertia::render('Home', [
+        'name' => 'Fernando Santivañez',
+        'frameworks' => [
+            'Laravel','Vue','Inertia']
+    ]);
 });
 /* **Comienzo 1
 Route::get('/dashboard', function () {
