@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Docente\DocenteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -18,7 +19,10 @@ use Inertia\Inertia;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware(['auth', 'role:admin'])->name('admin.index');*/
+/*
 Route::get('/', function () {
     return Inertia::render('Home');
 });
@@ -27,8 +31,10 @@ Route::get('/users', function () {
 });
 Route::get('/settings', function () {
     return Inertia::render('Settings');
+});*/
+Route::get('/', function () {
+    return view('welcome');
 });
-/* **Comienzo 1
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -38,11 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Final 1*/
-/*Route::get('/admin', function () {
-    return view('admin.index');
-})->middleware(['auth', 'role:admin'])->name('admin.index');*/
-/* Comienzo 2
+
 Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->group(function(){
     Route::get('/', [IndexController::class, 'index'])->name('index');
     //Roles y Permisos
@@ -60,5 +62,8 @@ Route::middleware(['auth', 'role:admin'])->name('admin.')->prefix('admin')->grou
     Route::delete('/users/{user}/permissions/{permission}', [UserController::class, 'revokePermission'])->name('users.permissions.revoke');
 });
 
+Route::middleware(['auth', 'role:docente'])->name('docente.')->prefix('docente')->group(function(){
+    Route::get('/', [DocenteController::class, 'index'])->name('index');
+});
+
 require __DIR__.'/auth.php';
-Final 2 */

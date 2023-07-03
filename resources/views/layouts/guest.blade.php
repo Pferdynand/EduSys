@@ -15,7 +15,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+        <div id="main" class="main-content flex-1 bg-gray-300 mt-12 md:mt-2 pb-24 md:pb-5">
+
+            <div class="bg-gray-800 pt-3">
+                <div class="rounded-tl-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
+                    <h1 class="font-bold pl-2">Analytics</h1>
+                </div>
+            </div>
+        <div class="flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-300">
             <div>
                 <a href="/">
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -26,5 +33,6 @@
                 {{ $slot }}
             </div>
         </div>
+    </div>
     </body>
 </html>

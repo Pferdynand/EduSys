@@ -1,29 +1,15 @@
-// Fonts
-@import url('https://fonts.bunny.net/css?family=Nunito');
+$logo: #3DBB3D;
+$gray: #777777;
+$black: #070707;
+$green: #7ED386;
+$aqua: #3FB6A8;
+$white: #FFFFFF;
+
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
 
-
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
-
-.cuadromenupr{
-    height: 40%;
-    width:40%;
-    background-color: $pewter;
-}
-.cuadromenupr :hover {
-    background-color:black;
-  }
-  .imgmenupr{
-    justify-self: center;
-    border-radius: 10px;
-    margin-top: 10%;
-}
-
-
+$hulu: 'Nunito Sans', sans-serif;
+$heading: 'Montserrat', sans-serif;
+$body: 'Roboto', sans-serif;
 
 body {
   background: linear-gradient(to right, $aqua, $green);

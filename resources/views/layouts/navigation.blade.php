@@ -20,6 +20,11 @@
                         {{ __('Admin') }}
                     </x-nav-link>
                     @endrole
+                    @role('docente')
+                    <x-nav-link :href="route('docente.index')" :active="request()->routeIs('docente.index')">
+                        {{ __('Docente') }}
+                    </x-nav-link>
+                    @endrole
                 </div>
             </div>
 
@@ -46,7 +51,7 @@
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
+                            <button>Salir de sesión</button>
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
