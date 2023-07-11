@@ -2,12 +2,13 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
 </script>
-
+<!-- 
+    //Todo esto es el template por defecto
 <template>
     <AppLayout title="Dashboard">
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
+                Dashboardooooo
             </h2>
         </template>
 
@@ -20,3 +21,15 @@ import Welcome from '@/Components/Welcome.vue';
         </div>
     </AppLayout>
 </template>
+-->
+<template>
+    <AppLayout  title="Dashboard">
+        <h1>Hola, Vue JS</h1>
+    </AppLayout>
+</template>
+
+<style>
+h1{
+    color: rebeccapurple;
+}
+</style>
