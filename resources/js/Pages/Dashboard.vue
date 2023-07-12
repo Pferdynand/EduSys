@@ -1,6 +1,10 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Welcome from '@/Components/Welcome.vue';
+const name = "Vue Js es la hostia";
+const emer = "color: rgb(6 95 70);";
+const arCol = ["blue", "red", "peru"];
+const flag = false;
 </script>
 <!-- 
     //Todo esto es el template por defecto
@@ -24,7 +28,15 @@ import Welcome from '@/Components/Welcome.vue';
 -->
 <template>
     <AppLayout  title="Dashboard">
-        <h1>Hola, Vue JS</h1>
+        <div>
+            <div class="m-3 p-2">
+                <h1>Hola, {{name.toUpperCase()}}</h1>
+                <h2 :style="`color: ${arCol[2]}`">Zi, es color esmeralda</h2>
+                <h2>{{ flag ? "Estoy vivo": "Estoy morido" }}</h2>
+                <h2 v-if="flag">Estoy vivo</h2>
+                <h2 v-else>Estoy morido</h2>
+            </div>
+        </div>
     </AppLayout>
 </template>
 
